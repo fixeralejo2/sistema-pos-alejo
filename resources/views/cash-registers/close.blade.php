@@ -7,7 +7,8 @@
             <div class="card-header">
                 <h5><i class="fas fa-lock"></i> Cerrar Caja</h5>
             </div>
-            <form method="POST" action="{{ route('cash-registers.do-close', $cashRegister) }}">
+            <form method="POST" action="{{ route('cash-registers.do-close', $cashRegister) }}"
+                onsubmit="return confirm('¿Confirmas el cierre de caja?')">
                 @csrf
                 <div class="card-body">
                     <div class="alert alert-info">
@@ -37,8 +38,7 @@
                 </div>
                 <div class="card-footer d-flex justify-content-between">
                     <a href="{{ route('cash-registers.show', $cashRegister) }}" class="btn btn-default">Cancelar</a>
-                    <button type="submit" class="btn btn-danger"
-                        onclick="return confirm('¿Confirmas el cierre de caja?')">
+                    <button type="submit" class="btn btn-danger">
                         <i class="fas fa-lock"></i> Confirmar Cierre
                     </button>
                 </div>
