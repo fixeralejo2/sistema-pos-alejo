@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Sistema POS',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -301,11 +301,6 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type' => 'navbar-search',
-            'text' => 'search',
-            'topnav_right' => true,
-        ],
-        [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
@@ -316,81 +311,68 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
+            'text' => 'Dashboard',
+            'url'  => 'dashboard',
+            'icon' => 'fas fa-fw fa-tachometer-alt',
+            'can'  => 'ver dashboard',
+        ],
+        ['header' => 'CAJA Y VENTAS'],
+        [
+            'text' => 'Caja',
+            'url'  => 'cash-registers',
+            'icon' => 'fas fa-fw fa-cash-register',
+            'can'  => 'ver caja',
         ],
         [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
+            'text' => 'Ventas',
+            'url'  => 'sales',
+            'icon' => 'fas fa-fw fa-shopping-cart',
+            'can'  => 'ver ventas',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'CATÁLOGO'],
         [
-            'text' => 'profile',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Productos',
+            'url'  => 'products',
+            'icon' => 'fas fa-fw fa-box',
+            'can'  => 'ver productos',
         ],
         [
-            'text' => 'multilevel',
-            'icon' => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text' => 'important',
-            'icon_color' => 'red',
-            'url' => '#',
+            'text' => 'Categorías',
+            'url'  => 'categories',
+            'icon' => 'fas fa-fw fa-tags',
+            'can'  => 'ver categorias',
         ],
         [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
-            'url' => '#',
+            'text' => 'Clientes',
+            'url'  => 'customers',
+            'icon' => 'fas fa-fw fa-users',
+            'can'  => 'ver clientes',
+        ],
+        ['header' => 'INVENTARIO'],
+        [
+            'text' => 'Inventario',
+            'url'  => 'inventory',
+            'icon' => 'fas fa-fw fa-warehouse',
+            'can'  => 'ver inventario',
         ],
         [
-            'text' => 'information',
-            'icon_color' => 'cyan',
-            'url' => '#',
+            'text' => 'Movimientos',
+            'url'  => 'inventory/movements',
+            'icon' => 'fas fa-fw fa-history',
+            'can'  => 'ver inventario',
+        ],
+        ['header' => 'OTROS'],
+        [
+            'text' => 'Apartados',
+            'url'  => 'layaways',
+            'icon' => 'fas fa-fw fa-bookmark',
+            'can'  => 'ver apartados',
+        ],
+        [
+            'text' => 'Reportes',
+            'url'  => 'reports',
+            'icon' => 'fas fa-fw fa-chart-bar',
+            'can'  => 'ver reportes',
         ],
     ],
 
